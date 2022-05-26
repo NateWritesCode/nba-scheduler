@@ -1,0 +1,303 @@
+[
+  {
+    "abbrev": "ATL",
+    "conferenceId": 1,
+    "divisionId": 3,
+    "homeName": "Atlanta",
+    "id": 1610612737,
+    "nickname": "Hawks",
+    "lat": 33.75729,
+    "lng": -84.397331
+  },
+  {
+    "abbrev": "BOS",
+    "conferenceId": 1,
+    "divisionId": 1,
+    "homeName": "Boston",
+    "id": 1610612738,
+    "nickname": "Celtics",
+    "lat": 42.366291,
+    "lng": -71.06263
+  },
+  {
+    "abbrev": "CLE",
+    "conferenceId": 1,
+    "divisionId": 2,
+    "homeName": "Cleveland",
+    "id": 1610612739,
+    "nickname": "Cavaliers",
+    "lat": 41.49662,
+    "lng": -81.688431
+  },
+  {
+    "abbrev": "NOP",
+    "conferenceId": 2,
+    "divisionId": 6,
+    "homeName": "New Orleans",
+    "id": 1610612740,
+    "nickname": "Pelicans",
+    "venue": "Smoothie King Center",
+    "lat": 29.949035,
+    "lng": -90.082057
+  },
+  {
+    "abbrev": "CHI",
+    "conferenceId": 1,
+    "divisionId": 2,
+    "homeName": "Chicago",
+    "id": 1610612741,
+    "nickname": "Bulls",
+    "lat": 41.880692,
+    "lng": -87.67437
+  },
+  {
+    "abbrev": "DAL",
+    "conferenceId": 2,
+    "divisionId": 6,
+    "homeName": "Dallas",
+    "id": 1610612742,
+    "nickname": "Mavericks",
+    "lat": 32.790527,
+    "lng": -96.810883
+  },
+  {
+    "abbrev": "DEN",
+    "conferenceId": 2,
+    "divisionId": 4,
+    "homeName": "Denver",
+    "id": 1610612743,
+    "nickname": "Nuggets",
+    "lat": 39.74892,
+    "lng": -105.0084
+  },
+  {
+    "abbrev": "GSW",
+    "conferenceId": 2,
+    "divisionId": 5,
+    "homeName": "Golden State",
+    "id": 1610612744,
+    "nickname": "Warriors",
+    "lat": 37.768009,
+    "lng": -122.387787
+  },
+  {
+    "abbrev": "HOU",
+    "conferenceId": 2,
+    "divisionId": 6,
+    "homeName": "Houston",
+    "id": 1610612745,
+    "nickname": "Rockets",
+    "lat": 29.7524505,
+    "lng": -95.3618826
+  },
+  {
+    "abbrev": "LAC",
+    "conferenceId": 2,
+    "divisionId": 5,
+    "homeName": "Los Angeles",
+    "id": 1610612746,
+    "nickname": "Clippers",
+    "lat": 34.043087,
+    "lng": -118.267616
+  },
+  {
+    "abbrev": "LAL",
+    "conferenceId": 2,
+    "divisionId": 5,
+    "homeName": "Los Angeles",
+    "id": 1610612747,
+    "nickname": "Lakers",
+    "lat": 34.043087,
+    "lng": -118.267616
+  },
+  {
+    "abbrev": "MIA",
+    "conferenceId": 1,
+    "divisionId": 3,
+    "homeName": "Miami",
+    "id": 1610612748,
+    "nickname": "Heat",
+    "lat": 25.781441,
+    "lng": -80.188332
+  },
+  {
+    "abbrev": "MIL",
+    "conferenceId": 1,
+    "divisionId": 2,
+    "homeName": "Milwaukee",
+    "id": 1610612749,
+    "nickname": "Bucks",
+    "lat": 43.045231,
+    "lng": -87.917923
+  },
+  {
+    "abbrev": "MIN",
+    "conferenceId": 2,
+    "divisionId": 4,
+    "homeName": "Minnesota",
+    "id": 1610612750,
+    "nickname": "Timberwolves",
+    "lat": 44.979528,
+    "lng": -93.275989
+  },
+  {
+    "abbrev": "BKN",
+    "conferenceId": 1,
+    "divisionId": 1,
+    "homeName": "Brooklyn",
+    "id": 1610612751,
+    "nickname": "Nets",
+    "lat": 40.682732,
+    "lng": -73.975876
+  },
+  {
+    "abbrev": "NYK",
+    "conferenceId": 1,
+    "divisionId": 1,
+    "homeName": "New York",
+    "id": 1610612752,
+    "nickname": "Knicks",
+    "lat": 40.750298,
+    "lng": -73.993324
+  },
+  {
+    "abbrev": "ORL",
+    "conferenceId": 1,
+    "divisionId": 3,
+    "homeName": "Orlando",
+    "id": 1610612753,
+    "nickname": "Magic",
+    "lat": 28.538336,
+    "lng": -81.379236
+  },
+  {
+    "abbrev": "IND",
+    "conferenceId": 1,
+    "divisionId": 2,
+    "homeName": "Indiana",
+    "id": 1610612754,
+    "nickname": "Pacers",
+    "lat": 39.763924,
+    "lng": -86.155807
+  },
+  {
+    "abbrev": "PHI",
+    "conferenceId": 1,
+    "divisionId": 1,
+    "homeName": "Philadelphia",
+    "id": 1610612755,
+    "nickname": "76ers",
+    "lat": 39.901333,
+    "lng": -75.172592
+  },
+  {
+    "abbrev": "PHX",
+    "conferenceId": 2,
+    "divisionId": 5,
+    "homeName": "Phoenix",
+    "id": 1610612756,
+    "nickname": "Suns",
+    "lat": 33.445938,
+    "lng": -112.071487
+  },
+  {
+    "abbrev": "POR",
+    "conferenceId": 2,
+    "divisionId": 4,
+    "homeName": "Portland",
+    "id": 1610612757,
+    "nickname": "Trail Blazers",
+    "lat": 45.531609,
+    "lng": -122.667236
+  },
+  {
+    "abbrev": "SAC",
+    "conferenceId": 2,
+    "divisionId": 5,
+    "homeName": "Sacramento",
+    "id": 1610612758,
+    "nickname": "Kings",
+    "lat": 38.580368028215126,
+    "lng": -121.49930615053546
+  },
+  {
+    "abbrev": "SAS",
+    "conferenceId": 2,
+    "divisionId": 6,
+    "homeName": "San Antonio",
+    "id": 1610612759,
+    "nickname": "Spurs",
+    "lat": 29.426931,
+    "lng": -98.437599
+  },
+  {
+    "abbrev": "OKC",
+    "conferenceId": 2,
+    "divisionId": 4,
+    "homeName": "Oklahoma City",
+    "id": 1610612760,
+    "nickname": "Thunder",
+    "lat": 35.463608,
+    "lng": -97.51564
+  },
+  {
+    "abbrev": "TOR",
+    "conferenceId": 1,
+    "divisionId": 1,
+    "homeName": "Toronto",
+    "id": 1610612761,
+    "nickname": "Raptors",
+    "lat": 43.643475,
+    "lng": -79.379379
+  },
+  {
+    "abbrev": "UTA",
+    "conferenceId": 2,
+    "divisionId": 4,
+    "homeName": "Utah",
+    "id": 1610612762,
+    "nickname": "Jazz",
+    "lat": 40.76890189042454,
+    "lng": -111.89962827830881
+  },
+  {
+    "abbrev": "MEM",
+    "conferenceId": 2,
+    "divisionId": 6,
+    "homeName": "Memphis",
+    "id": 1610612763,
+    "nickname": "Grizzlies",
+    "lat": 35.138351,
+    "lng": -90.051025
+  },
+  {
+    "abbrev": "WAS",
+    "conferenceId": 1,
+    "divisionId": 3,
+    "homeName": "Washington",
+    "id": 1610612764,
+    "nickname": "Wizards",
+    "lat": 38.898129,
+    "lng": -77.021172
+  },
+  {
+    "abbrev": "DET",
+    "conferenceId": 1,
+    "divisionId": 2,
+    "homeName": "Detroit",
+    "id": 1610612765,
+    "nickname": "Pistons",
+    "lat": 42.34172115245251,
+    "lng": -83.0547523158737
+  },
+  {
+    "abbrev": "CHA",
+    "conferenceId": 1,
+    "divisionId": 3,
+    "homeName": "Charlotte",
+    "id": 1610612766,
+    "nickname": "Hornets",
+    "lat": 35.22587056923433,
+    "lng": -80.83745990952639
+  }
+]
