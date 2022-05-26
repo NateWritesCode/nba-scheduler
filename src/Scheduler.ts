@@ -25,8 +25,8 @@ type TeamSchedulerObj = {
 };
 
 class Scheduler {
-  private schedule: ScheduledGame[];
-  private teamSchedulerObj: TeamSchedulerObj;
+  public schedule: ScheduledGame[];
+  public teamSchedulerObj: TeamSchedulerObj;
   private teams: Team[];
 
   constructor(teams: Team[]) {
