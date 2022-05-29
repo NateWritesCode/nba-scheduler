@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --no-notify --respawn --transpile-only --quiet src/index",
-    "test": "jest -i"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",

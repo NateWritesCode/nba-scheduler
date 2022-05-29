@@ -38,8 +38,8 @@ class Scheduler {
       this.teamSchedulerObj[team.abbrev] = {
         commonNonDivisionOpponents: [],
         ha: [],
-        // ha[0] is the group of rareNonDivOpps that a team should play 2 home games against
-        // ha[1] is the group that a team should play 2 away games against, (and 1 home game)
+        // ha[0] is the group of rareNonDivOpps that a team should play 2 home games against and 1 away game
+        // ha[1] is the group of rareNonDivOpps that a team should play 2 away games against and 1 home game
         rareNonDivisionOpponents: [],
         schedule: [],
         teamCalendar: {},
@@ -180,6 +180,7 @@ class Scheduler {
       }
     }
 
+    // we have our rare opponents and matching home/away, now push these games to the general schedule
     this.teams.forEach((team) => {
       this.teamSchedulerObj[team.abbrev].ha[0].forEach((h: string) => {
         let i = 0;
@@ -206,7 +207,7 @@ class Scheduler {
 
     this.schedule.sort((a: any, b: any) => a.date - b.date);
 
-    return this.schedule;
+    return { schedule: this.schedule, teamSchedulerObj: this.teamSchedulerObj };
   };
 
   private getNonDivisionOpponents = (team: Team) => {
@@ -245,11 +246,14 @@ class Scheduler {
   };
 
   private initializeHa = (team: Team) => {
+    //choose 2 random rare opps for team to put in 0 bucket
     this.teamSchedulerObj[team.abbrev].ha[0] = simpleStatSample(
       this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents,
       2,
       () => random.float(0, 1)
     );
+
+    //put the other 2 rare opponents in 1 bucket
     this.teamSchedulerObj[team.abbrev].ha[1] = this.teamSchedulerObj[
       team.abbrev
     ].rareNonDivisionOpponents.filter((teamAbbrev: string) => {
@@ -273,7 +277,7 @@ class Scheduler {
     });
 
     if (i !== 2) {
-      console.log("Make HA Consistent error", team.abbrev);
+      throw new Error(`Make HA Consistent error ${team.abbrev}`);
     }
   };
 
@@ -341,7 +345,11 @@ class Scheduler {
       this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents.length;
 
     if (numScheduledRareGames > 4) {
+      //current team has more than four opponents, need to remove some
+      //pick random team from current rare opponents
       const randAbbrev = sample(rareNonDivisionOpponents)!;
+
+      //remove the team from current team and opponents rare opponents
       this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents =
         this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents.filter(
           (team: string) => team !== randAbbrev
@@ -351,6 +359,7 @@ class Scheduler {
           (randTeam: string) => randTeam !== team.abbrev
         );
 
+      //re-run this function for both teams
       this.setRareNonDivisionOpponents(team);
       this.setRareNonDivisionOpponents(this.getTeamByAbbrev(randAbbrev));
     } else if (numScheduledRareGames < 4) {
@@ -362,6 +371,7 @@ class Scheduler {
         );
       }
 
+      //the randomly picked opponent is already a rare opponent, call again to make another choice
       if (
         this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents.includes(
           opp.abbrev
@@ -375,18 +385,22 @@ class Scheduler {
         return;
       }
 
+      // We can use this opponent so push them to each team's holders
       this.teamSchedulerObj[team.abbrev].rareNonDivisionOpponents.push(
         opp.abbrev
       );
       this.teamSchedulerObj[opp.abbrev].rareNonDivisionOpponents.push(
         team.abbrev
       );
+      // call this function again for both teams
+
       this.setRareNonDivisionOpponents(team);
       this.setRareNonDivisionOpponents(opp);
     }
   };
 
   private swapHa = (team1: Team, team2: Team) => {
+    //ensure that ha[0] and ha[1] for both teams aligns
     while (
       this.teamSchedulerObj[team1.abbrev].ha[0].includes(team2.abbrev) &&
       !this.teamSchedulerObj[team2.abbrev].ha[1].includes(team1.abbrev)
