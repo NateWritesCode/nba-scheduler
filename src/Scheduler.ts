@@ -6,7 +6,7 @@ import { Team } from "./types";
 import Game from "./Game";
 
 type ScheduledGame = {
-  date: Date;
+  date: string;
   id: number;
   team0Id: number;
   team1Id: number;
@@ -205,7 +205,38 @@ class Scheduler {
       });
     });
 
-    this.schedule.sort((a: any, b: any) => a.date - b.date);
+    this.schedule = this.schedule.sort((gameA, gameB) => {
+      if (gameA.date > gameB.date) {
+        return 1;
+      } else if (gameB.date < gameA.date) {
+        return -1;
+      }
+
+      return 0;
+    });
+    // .map((game, i) => {
+    //   return {
+    //     ...game,
+    //     id: i + 1,
+    //   };
+    // });
+
+    this.schedule = this.schedule
+      .sort((a: any, b: any) => {
+        if (a.date > b.date) {
+          return 1;
+        } else if (a.date < b.date) {
+          return -1;
+        }
+
+        return 0;
+      })
+      .map((game, i) => {
+        return {
+          ...game,
+          id: i + 1,
+        };
+      });
 
     return { schedule: this.schedule, teamSchedulerObj: this.teamSchedulerObj };
   };
@@ -297,8 +328,8 @@ class Scheduler {
       this.teamSchedulerObj[awayTeam.abbrev].teamCalendar[gameDate] = true;
 
       this.schedule.push({
-        date: new Date(gameDate),
-        id: this.schedule.length + 1,
+        date: gameDate,
+        id: 1,
         team0Id: homeTeam.id,
         team1Id: awayTeam.id,
       });
